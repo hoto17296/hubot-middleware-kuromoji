@@ -19,3 +19,8 @@ module.exports = (robot) ->
       if token.pos == '感動詞'
         msg.reply token.surface_form
 ```
+
+```
+hubot> こんにちは
+Shell: こんにちは
+```
