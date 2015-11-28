@@ -21,8 +21,9 @@
     "hubot": "2.x"
   },
   "main": "index.js",
-  "scripts": {
+  "scripts": {},
+  "dependencies": {
+    "kuromoji": "*"
   },
-  "devDependencies": {
-  }
+  "devDependencies": {}
 }
