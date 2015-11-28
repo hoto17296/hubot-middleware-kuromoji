@@ -1,5 +1,5 @@
 # hubot-middleware-kuromoji
-Tokenize all the messages that Hubot have received by [kuromoji.js](https://www.npmjs.com/package/kuromoji).
+Tokenize all the messages that Hubot have received by [kuromoji.js](https://www.npmjs.com/package/kuromoji)
 
 ## Install
 ```
@@ -9,7 +9,7 @@ npm install hubot-middleware-kuromoji
 Add `"hubot-middleware-kuromoji"` to your `external-scripts.json`
 
 ## Usage
-You can use tokenized sentence from `msg.message.tokenized`.
+You can use tokenized sentence from `msg.message.tokenized`
 
 ``` coffee
 module.exports = (robot) ->
