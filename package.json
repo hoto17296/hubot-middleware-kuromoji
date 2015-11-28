@@ -1,0 +1,28 @@
+{
+  "name": "hubot-middleware-kuromoji",
+  "description": "A hubot middleware for kuromoji.js",
+  "version": "0.0.1",
+  "author": "hoto17296",
+  "license": "MIT",
+  "keywords": [
+    "hubot",
+    "hubot-scripts",
+    "hubot-middleware",
+    "kuromoji"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/hoto17296/hubot-middleware-kuromoji.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hoto17296/hubot-middleware-kuromoji/issues"
+  },
+  "peerDependencies": {
+    "hubot": "2.x"
+  },
+  "main": "index.js",
+  "scripts": {
+  },
+  "devDependencies": {
+  }
+}

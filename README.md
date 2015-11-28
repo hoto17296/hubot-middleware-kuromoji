@@ -1,0 +1,1 @@
+# hubot-middleware-kuromoji
