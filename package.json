@@ -21,9 +21,14 @@
     "hubot": "2.x"
   },
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "mocha"
+  },
   "dependencies": {
     "kuromoji": "*"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "assert": "*",
+    "mocha": "*"
+  }
 }
