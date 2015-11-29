@@ -16,17 +16,19 @@ describe('hubot', function() {
   });
 
   it('should tokenize message', function(done) {
-    var context = { response: { message: { text: 'すもももももももものうち' } } };
-    mockRobot.middleware.apply(undefined, [
-      context,
-      function() {
-        var tokenized = context.response.message.tokenized;
-        assert.equal( tokenized[0].surface_form, 'すもも' );
-        assert.equal( tokenized[0].pos, '名詞' );
-        done();
-      },
-      function() {},
-    ]);
+    setTimeout(function() {
+      var context = { response: { message: { text: 'すもももももももものうち' } } };
+      mockRobot.middleware.apply(undefined, [
+        context,
+        function() {
+          var tokenized = context.response.message.tokenized;
+          assert.equal( tokenized[0].surface_form, 'すもも' );
+          assert.equal( tokenized[0].pos, '名詞' );
+          done();
+        },
+        function() {},
+      ]);
+    }, 1000);
   });
 
 });
