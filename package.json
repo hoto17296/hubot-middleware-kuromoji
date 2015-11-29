@@ -1,7 +1,7 @@
 {
   "name": "hubot-middleware-kuromoji",
   "description": "A hubot middleware for kuromoji.js",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "hoto17296",
   "license": "MIT",
   "keywords": [

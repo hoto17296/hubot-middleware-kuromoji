@@ -9,14 +9,14 @@ var mockRobot = {
 
 describe('hubot', function() {
 
-  require('../')(mockRobot);
+  var promise = require('../')(mockRobot);
 
   it('should register middleware', function() {
     assert.ok( mockRobot.middleware );
   });
 
   it('should tokenize message', function(done) {
-    setTimeout(function() {
+    promise.then(function() {
       var context = { response: { message: { text: 'すもももももももものうち' } } };
       mockRobot.middleware.apply(undefined, [
         context,
@@ -28,7 +28,7 @@ describe('hubot', function() {
         },
         function() {},
       ]);
-    }, 1000);
+    });
   });
 
 });
