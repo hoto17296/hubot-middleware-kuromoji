@@ -3,7 +3,7 @@ var kuromoji = require('kuromoji');
 module.exports = function(robot) {
 
   robot.receiveMiddleware(function(context, next, done) {
-    var dicPath = process.env.HUBOT_KUROMOJI_DICTIONARY_PATH || 'node_modules/kuromoji/dist/dict/';
+    var dicPath = process.env.HUBOT_KUROMOJI_DICTIONARY_PATH || __dirname + '/node_modules/kuromoji/dist/dict/';
     kuromoji.builder({ dicPath: dicPath }).build(function(err, tokenizer) {
       if ( err ) {
         robot.logger.error(err);
