@@ -16,7 +16,7 @@ describe('hubot', function() {
   });
 
   it('should tokenize message', function(done) {
-    if ( ! promise.then ) {
+    if ( ! ( promise && promise.then ) ) {
       assert.ok(true);
       return done();
     }
