@@ -1,4 +1,6 @@
 # hubot-middleware-kuromoji
+[![Build Status](https://travis-ci.org/hoto17296/hubot-middleware-kuromoji.svg)](https://travis-ci.org/hoto17296/hubot-middleware-kuromoji)
+
 Tokenize all the messages that Hubot have received by [kuromoji.js](https://www.npmjs.com/package/kuromoji)
 
 ## Install
