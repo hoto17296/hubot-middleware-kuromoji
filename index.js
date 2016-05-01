@@ -1,7 +1,7 @@
 var kuromoji = require('kuromoji');
 var fs = require('fs');
 
-function availableFiles(paths) {
+function availablePaths(paths) {
   if ( ! Array.isArray(paths) ) {
     paths = Array.prototype.slice.call(arguments);
   }
@@ -17,7 +17,7 @@ module.exports = function(robot) {
     process.env.HUBOT_KUROMOJI_DICTIONARY_PATH,
     require.resolve('kuromoji').replace(/(\/node_modules\/kuromoji\/).*$/, '$1dist/dict'),
   ];
-  var dicPath = availableFiles(dicPaths)[0];
+  var dicPath = availablePaths(dicPaths)[0];
   var tokenizer = null;
 
   // register middleware
