@@ -13,17 +13,17 @@ module.exports = function(robot) {
     next();
   });
 
-  // initialize tokenizer
-  function initialize(resolve, reject) {
+  return new Promise(function(resolve, reject) {
+    // initialize tokenizer
     kuromoji.builder({ dicPath: dicPath }).build(function(err, _tokenizer) {
       if ( err ) {
         robot.logger.error(err);
-        if ( reject ) { reject(err); }
-      } else {
+        reject(err);
+      }
+      else {
         tokenizer = _tokenizer;
-        if ( resolve ) { resolve(); }
+        resolve();
       }
     });
-  }
-  return typeof Promise !== 'undefined' ? new Promise(initialize) : initialize();
+  });
 }
