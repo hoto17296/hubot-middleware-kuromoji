@@ -1,7 +1,23 @@
 var kuromoji = require('kuromoji');
+var fs = require('fs');
+
+function availableFiles(paths) {
+  if ( ! Array.isArray(paths) ) {
+    paths = Array.prototype.slice.call(arguments);
+  }
+  return paths.filter(function(path) {
+    try { fs.statSync(path); }
+    catch(e) { return false; }
+    return true;
+  });
+}
 
 module.exports = function(robot) {
-  var dicPath = process.env.HUBOT_KUROMOJI_DICTIONARY_PATH || __dirname + '/node_modules/kuromoji/dist/dict/';
+  var dicPaths = [
+    process.env.HUBOT_KUROMOJI_DICTIONARY_PATH,
+    require.resolve('kuromoji').replace(/(\/node_modules\/kuromoji\/).*$/, '$1dist/dict'),
+  ];
+  var dicPath = availableFiles(dicPaths)[0];
   var tokenizer = null;
 
   // register middleware
